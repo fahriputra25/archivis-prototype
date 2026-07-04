@@ -1,0 +1,150 @@
+body{
+    margin:0;
+    font-family: system-ui;
+    background: linear-gradient(180deg,#f7fbff,#eef3ff);
+    color:#0f172a;
+}
+
+/* TOPBAR */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 16px;
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.brand{
+    font-weight:800;
+    background: linear-gradient(90deg,#06b6d4,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.pill{
+    font-size:12px;
+    padding:6px 10px;
+    background:#eef2ff;
+    border-radius:999px;
+}
+
+/* APP */
+.app{
+    padding:14px;
+}
+
+.page{
+    display:none;
+    animation:fade .2s ease;
+}
+.page.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(8px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* DROPZONE */
+.dropzone{
+    border:2px dashed #93c5fd;
+    padding:24px;
+    text-align:center;
+    border-radius:14px;
+    background:#f8fafc;
+    margin:10px 0;
+}
+
+/* FORM */
+.form input, select{
+    width:100%;
+    padding:10px;
+    margin:6px 0;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background: linear-gradient(90deg,#06b6d4,#8b5cf6);
+    color:white;
+    font-weight:600;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:14px;
+    margin:10px 0;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+}
+
+/* PROGRESS */
+.progress{
+    height:10px;
+    background:#e5e7eb;
+    border-radius:999px;
+    overflow:hidden;
+}
+.bar{
+    height:100%;
+    background: linear-gradient(90deg,#06b6d4,#22c55e);
+}
+
+/* TIMELINE */
+.timeline div{
+    padding:8px 0;
+    border-left:3px solid #06b6d4;
+    padding-left:10px;
+    margin-left:6px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.tile{
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    border:1px solid #e5e7eb;
+}
+
+/* STATUS */
+.status{
+    margin-top:10px;
+    padding:10px;
+    background:#dcfce7;
+    color:#166534;
+    text-align:center;
+    border-radius:12px;
+    font-weight:700;
+}
+
+/* BOTTOM NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-around;
+    background:white;
+    border-top:1px solid #e5e7eb;
+    padding:8px;
+}
+
+.bottom-nav button{
+    width:auto;
+    flex:1;
+    margin:0 4px;
+    font-size:12px;
+}

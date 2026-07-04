@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARCHIVIS AI</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="brand">ARCHIVIS</div>
+    <div class="pill">AI Preservation System</div>
+</div>
+
+<!-- PAGE WRAPPER -->
+<div class="app">
+
+    <!-- NAV PAGES -->
+    <div class="pages">
+
+        <!-- PAGE 1: UPLOAD -->
+        <section class="page active" id="uploadPage">
+            <h2>Upload Asset</h2>
+
+            <div class="dropzone">
+                Drag & Drop File Here
+                <small>.jpg .pdf .tiff .mp4</small>
+            </div>
+
+            <div class="form">
+                <label>Asset Type</label>
+                <select>
+                    <option>Manuscript</option>
+                    <option>Artifact</option>
+                    <option>Audio Record</option>
+                </select>
+
+                <label>Title</label>
+                <input type="text" placeholder="Ancient Document...">
+
+                <label>Year</label>
+                <input type="text">
+
+                <label>Origin</label>
+                <input type="text">
+            </div>
+
+            <button onclick="goAI()">Start AI Processing</button>
+        </section>
+
+        <!-- PAGE 2: AI -->
+        <section class="page" id="aiPage">
+            <h2>AI Analysis</h2>
+
+            <div class="card">
+                <p class="muted">Classification</p>
+                <h3>Historical Document</h3>
+
+                <p class="muted">Confidence</p>
+                <h3>94%</h3>
+            </div>
+
+            <div class="card">
+                <p>Preservation Risk</p>
+                <div class="progress">
+                    <div class="bar" style="width:18%"></div>
+                </div>
+                <small>LOW RISK (18%)</small>
+            </div>
+
+            <div class="card">
+                <h4>Recommendation</h4>
+                <ul>
+                    <li>Metadata enrichment</li>
+                    <li>Format normalization</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PAGE 3: BLOCKCHAIN -->
+        <section class="page" id="chainPage">
+            <h2>Blockchain Ledger</h2>
+
+            <div class="timeline">
+                <div>✔ Upload → Block #89102</div>
+                <div>✔ AI Analysis → Block #89115</div>
+                <div>✔ Metadata → Block #89128</div>
+                <div>✔ IPFS Store → Block #89155</div>
+            </div>
+
+            <div class="status">
+                IMMUTABLE VERIFIED
+            </div>
+        </section>
+
+        <!-- PAGE 4: DASHBOARD -->
+        <section class="page" id="dashPage">
+            <h2>System Overview</h2>
+
+            <div class="grid">
+                <div class="tile">Assets<br><b>12,430</b></div>
+                <div class="tile">At Risk<br><b>312</b></div>
+                <div class="tile">Preserved<br><b>98.1%</b></div>
+            </div>
+
+            <canvas id="chart"></canvas>
+        </section>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM NAV (MOBILE) -->
+<div class="bottom-nav">
+    <button onclick="show('uploadPage')">Upload</button>
+    <button onclick="show('aiPage')">AI</button>
+    <button onclick="show('chainPage')">Chain</button>
+    <button onclick="show('dashPage')">Stats</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
